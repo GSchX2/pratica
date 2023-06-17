@@ -1,0 +1,260 @@
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+    --cor-bg-body-footer: #F2F5F7;
+    --cor-bg-vantagens: #5E9EDC;
+    --cor-bg-mapa: #324C64;
+    --cor-bg-lista-cursos-nav: white;
+    --cor-bg-botao-primario: #EC6E5A;
+    --cor-bg-botao-secundario: #4DBA7A;
+
+    --cor-texto-primaria: black;
+    --cor-texto-secundaria: white;
+    --cor-texto-nav: #9799A6;
+    --cor-texto-lista-coluna-1: #25D285;
+    --cor-texto-lista-coluna-2: #5EC6F3;
+    --cor-texto-lista-coluna-3: #AD85BF;
+    --cor-texto-lista-coluna-4: #EC6E5A;
+
+    --tamanho-texto-titulos: 3.2rem;
+    --tamanho-texto-mapa-lista-titulos: 2.1rem;
+    --tamanho-texto-medio: 2.5rem;
+    --tamanho-texto-pequeno: 1.5rem;
+
+    --espessura-texto-grossa: 700;
+    --espessura-texto-regular: 400;
+}
+
+body {
+    background-color: var(--cor-bg-body-footer);
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.container {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+}
+
+.cabecalho {
+    align-items: center;
+    background-color: var(--cor-bg-lista-cursos-nav);
+    color: var(--cor-texto-primaria);
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: var(--espessura-texto-regular);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cabecalho__logo {
+    font-size: var(--tamanho-texto-titulos);
+    font-weight: var(--espessura-texto-grossa);
+}
+
+.cabecalho__link {
+    margin-inline-start: 0.7rem;
+    display: inline-block;
+}
+
+.cabecalho__link a {
+    border: 1px solid var(--cor-texto-nav);
+    border-radius: 0.5rem;
+    color: var(--cor-texto-nav);
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.cursos {
+    padding-top: 2rem;
+}
+
+.cursos__titulo {
+    font-size: var(--tamanho-texto-titulos);
+    font-weight: var(--espessura-texto-grossa);
+}
+
+.cursos__lista-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.cursos__lista-cursos-item {
+    background-color: var(--cor-bg-lista-cursos-nav);
+    height: 10rem;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    width: calc(25% - 1.5%);
+}
+.cursos__lista-cursos-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.cursos__lista-cursos-link {
+    color: var(--cor-texto-primaria);
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: var(--espessura-texto-grossa);
+    text-decoration: none;
+}
+
+.cursos__lista-cursos-link:before {
+    content: '';
+    display: block;
+    height: 5rem;
+    margin: 1rem auto;
+    width: 5rem;
+}
+
+.cursos__lista-cursos-item:nth-child(even) .cursos__lista-cursos-link:before {
+    background: url(./img/background1.svg) no-repeat;
+}
+
+.cursos__lista-cursos-item:nth-child(odd) .cursos__lista-cursos-link:before {
+    background: url(./img/background2.svg) no-repeat;
+}
+
+.vantagens {
+    background-color: var(--cor-bg-vantagens);
+    color: var(--cor-texto-secundaria);
+    display: flex;
+    line-height: 2;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.vantagens-video {
+    width: 50%;
+}
+
+.vantagens__sobre {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    width: 50%;
+}
+
+.vantagens__sobre-titulo {
+    color: inherit;
+    font-size: var(--tamanho-texto-medio);
+    font-weight: var(--espessura-texto-grossa);
+}
+
+.vantagens__sobre-lista {
+    color: inherit;
+    flex: 1;
+    font-size: var(--tamanho-texto-mapa-lista-titulos);
+    font-weight: var(--espessura-texto-regular);
+}
+
+.vantagens__sobre-link {
+    background-color: #EC6E5A;
+    border: 1px solid var(--cor-bg-botao-primario);
+    border-radius: 5px;
+    color: inherit;
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: var(--espessura-texto-regular);
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.rodape__mapa-cursos {
+    background-color: var(--cor-bg-mapa);
+    color: var(--cor-texto-secundaria);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.rodape__mapa-cursos-lista {
+    align-content: space-between;
+    display: flex;
+    flex-flow: column wrap;
+    height: 27rem;
+}
+
+.rodape__mapa-cursos-titulo {
+    color: var(--cor-texto-secundaria);
+    font-size: var(--tamanho-texto-titulos);
+    font-weight: var(--espessura-texto-grossa);
+}
+
+.rodape__mapa-cursos-titulos-backend {color: var(--cor-texto-lista-coluna-1);}
+.rodape__mapa-cursos-titulos-frontend {color: var(--cor-texto-lista-coluna-2);}
+.rodape__mapa-cursos-titulos-frameworks {color: var(--cor-texto-lista-coluna-3);}
+.rodape__mapa-cursos-titulos-bd {color: var(--cor-texto-lista-coluna-4);}
+
+.rodape__mapa-cursos-titulos-backend,
+.rodape__mapa-cursos-titulos-frontend,
+.rodape__mapa-cursos-titulos-frameworks,
+.rodape__mapa-cursos-titulos-bd {
+    border-left: 4px solid;
+    font-size: var(--tamanho-texto-mapa-lista-titulos);
+    margin: 2rem 0;
+    padding-left: 0.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.rodape__mapa-cursos-item {
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: var(--espessura-texto-regular);
+    margin-top: 1rem;
+}
+
+.rodape__mapa-cursos-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rodape__parceiros {
+    background-color: var(--cor-bg-body-footer);
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.rodape__contato-form-legenda {
+    color: var(--cor-texto-primaria);
+    padding-bottom: 1rem;
+}
+
+.rodape__contato-form-input {
+    border: 1px solid var(--cor-bg-botao-secundario);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: var(--cor-texto-primaria);
+    padding: 1rem;
+}
+
+.rodape__contato-form-submit {
+    background-color: var(--cor-bg-botao-secundario);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--cor-texto-secundaria);
+    cursor: pointer;
+}
+
+.rodape__contato-form-legenda,
+.rodape__contato-form-input,
+.rodape__contato-form-submit {
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: var(--espessura-texto-regular);
+    outline: none;
+}
+
+.rodape__parceiros-lista {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.rodape__contato-form-fieldset {
+    display: flex;
+}
