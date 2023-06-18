@@ -345,4 +345,8 @@ body {
         height: 27rem;
         align-content: space-between;
     }
+
+    .cabecalho__item--order {
+        order: 1;
+    }
 }
