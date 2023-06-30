@@ -71,6 +71,10 @@
     margin-inline: 1.3rem;
 }
 
+.cabecalho__nav-item a:hover {
+    text-decoration: underline;
+}
+
 .chamada {
     background-color: var(--cor-bg-primario);
     color: var(--cor-texto-primario);
@@ -139,7 +143,8 @@
 }
 
 .destaque__link {
-    border: 1px solid var(--cor-botao-destaques);
+    background-color: var(--cor-bg-secundario);
+    border: 1px solid;
     border-radius: 5px;
     color: var(--cor-botao-destaques);
     display: block;
@@ -148,6 +153,10 @@
     padding-block: 1.7rem;
     text-align: center;
     width: min(100%, 35rem);
+}
+
+.destaque__link:hover {
+    filter: contrast(0.8);
 }
 
 .diferenciais {
@@ -364,14 +373,19 @@
 }
 
 .contato__botao {
-    background-color: inherit;
+    background-color: var(--cor-texto-primario);
     border: 1px solid var(--cor-texto-terciario);
     border-radius: 5px;
     color: var(--cor-texto-terciario);
+    cursor: pointer;
     font-size: var(--tamanho-fonte-pequena);
     font-weight: var(--espessura-400);
     padding-block: 1.4rem;
     width: min(88%, 35rem);
+}
+
+.contato__botao:hover {
+    filter: contrast(0.8);
 }
 
 .institucional {
@@ -458,6 +472,10 @@
     display: inline-block;
     margin-inline: 1rem;
     line-height: 48px;
+}
+
+.rodape__item a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
